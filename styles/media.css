@@ -1,0 +1,154 @@
+/* Braikpoint 1 */
+@media screen and (max-width: 862px) {
+    ._container {
+        max-width: 750px;
+    }
+    .hello__avatar {
+        padding: 0;
+    }
+}
+
+/* Braikpoint 2 */
+@media screen and (max-width: 991px) {
+    ._container {
+        max-width: none;
+        padding: 0 10px;
+    }
+}
+
+/* Braikpoint 3 */
+@media (max-width: 767px) {
+
+}
+
+/* Braikpoint 4 */
+/* Скрытия/появление бургера через адаптив, доделать потом скрытия самой навигации  */
+@media (max-width: 480px) {
+     .icon-menu {
+        display: block;
+        position: fixed;
+        top: 18px;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+        z-index: 5;
+    }
+    .icon-menu span {
+        transition: all 0.3s ease 0s;
+        top: calc(50% - 1px);
+        left: 0px;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #545454;
+    }
+    .icon-menu span:first-child {
+        top: 0px;
+    }
+    .icon-menu span:last-child {
+        top: auto;
+        bottom: 0px;
+    }
+    ._active span:first-child {
+        transform: rotate(-45deg);
+        top: calc(50% - 1px);
+    }
+    ._active span:last-child {
+        transform: rotate(45deg);
+        bottom: calc(50% - 1px);
+    }
+    ._active span:nth-child(2) {
+        transform: scale(0);
+    }
+    .menu__link {
+        display: none;
+    }
+    .menu__link {
+        padding: 0;
+        margin: 0;
+    }
+    .menu__list:first-child {
+        position: absolute;
+        top: 30px
+    }
+
+    .hello__avatar {
+        padding-bottom: 21px;
+        display: flex;
+        width: 174.38px;
+        height: 180px;
+    }
+    .hello__avatar > img {
+        margin: 0 auto;
+        width: 170px;
+        height: 170px;
+    }
+    .hello__container {
+        flex-direction: column-reverse;
+        width: 328px;
+        height: 531px;
+    }
+    .hello__content {
+        word-wrap: break-word;
+        width: 328px;
+        max-height: 311px;
+        padding: 0 5px 0;
+    }
+    .hello__content > * {
+        width: auto;
+        height: auto;
+        text-align: center;
+        padding: 19px 0;
+    }
+    .hello__btn {
+        width: 208px;
+        height: 47px;
+
+        text-align: center;
+    }
+    .hello__text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 23px;
+
+        width: 328px;
+        height: 96px;
+    }
+    .hello__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+
+        width: 312px;
+        height: 120px;
+    }
+    .hello {
+        padding: 0;
+    }
+}
+
+/* Braikpoint 5 */
+@media (max-width: 320px) {
+
+}
+
+
+/* Скрытие бургера, и добавление навигации обратно */
+@media screen and (min-width: 480px){
+    .icon-menu {
+        display: none;
+    }
+    .menu__link {
+        display: block;
+    }
+}
+
+/* Заменна цвета у навигации */
+@media screen and (min-width: 991px){
+    .menu__link:hover {
+        color: #FF6464;
+    }
+}
